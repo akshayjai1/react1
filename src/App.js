@@ -5,6 +5,7 @@ import './components/userInput/UserInput.css';
 import './components/userOutput/UserOutput.css';
 import UserInput  from './components/userInput/userInput';
 import UserOutput  from './components/userOutput/userOutput';
+import ValidationComponent from './components/validationComponent/ValidationComponent';
 
 class App extends Component {
   state = {
@@ -42,7 +43,7 @@ class App extends Component {
         <UserOutput username={this.state.usernames[0]}/>
         <UserOutput username={this.state.usernames[1]}/>
         <UserInput changer={this.inputChanger} name={this.state.usernames[0]}/>
-        
+        <ValidationComponent sLen={this.state.usernames[0].length}/>
       </div>
     );
   }
