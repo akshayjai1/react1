@@ -11,12 +11,13 @@ class App extends Component {
     usernames:["first", "second"]
   }
 
+  
   manipulateState = () =>{
     this.setState({
       usernames:[1,3]
     })
   }
-
+  
   inputChanger = (event) =>{
     console.log('hiiid');
     this.setState({
@@ -24,7 +25,10 @@ class App extends Component {
     })
   }
   render() {
-
+    const style = {
+      backgroundColor: "#3ee"
+    }
+    
     return (
       <div className="App">
         <header className="App-header">
@@ -34,7 +38,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <button onClick={this.manipulateState}>Hi</button>
+        <button style={style} onClick={this.manipulateState}>Hi</button>
         <UserOutput username={this.state.usernames[0]}/>
         <UserOutput username={this.state.usernames[1]}/>
         <UserInput changer={this.inputChanger} name={this.state.usernames[0]}/>
@@ -44,3 +48,9 @@ class App extends Component {
 }
 
 export default App;
+// const styles = StyleSheet.create({
+//   component: {
+//     backgroundColor: '#f88',
+//     marginVertical: 10
+//   }
+// });
