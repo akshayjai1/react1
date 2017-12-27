@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './components/userInput/UserInput.css';
+import './components/userOutput/UserOutput.css';
 import UserInput  from './components/userInput/userInput';
 import UserOutput  from './components/userOutput/userOutput';
 

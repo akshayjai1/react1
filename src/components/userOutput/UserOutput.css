@@ -1,0 +1,7 @@
+.uOutput{
+    width: 300px;
+    height: auto;
+    box-shadow: 1px inset;
+    margin: 10px auto;
+    border: 1px solid green;
+}
