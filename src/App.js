@@ -20,7 +20,6 @@ class App extends Component {
   }
   
   inputChanger = (event) =>{
-    console.log('hiiid');
     this.setState({
       usernames:[event.target.value,4]
     })
@@ -43,19 +42,10 @@ class App extends Component {
         <UserOutput username={this.state.usernames[0]}/>
         <UserOutput username={this.state.usernames[1]}/>
         <UserInput changer={this.inputChanger} name={this.state.usernames[0]}/>
-        {this.state.logos}{this.state.logos.length}
-        <div className={ (this.state.logos && (this.state.logos.length === 3)) ? 'width_15_percent' : (this.state.logos && (this.state.logos.length === 2)) ? 'width_20_percent' : 'width_50_percent' } >
-        some data
-</div>
+        
       </div>
     );
   }
 }
 
 export default App;
-// const styles = StyleSheet.create({
-//   component: {
-//     backgroundColor: '#f88',
-//     marginVertical: 10
-//   }
-// });
