@@ -6,7 +6,8 @@ import './components/userOutput/UserOutput.css';
 import UserInput  from './components/userInput/userInput';
 import UserOutput  from './components/userOutput/userOutput';
 import ValidationComponent from './components/validationComponent/ValidationComponent';
-import CharComponent from './components/char/charComponent';
+import CharOne from './components/char/CharOne';
+// import CharComponent from './components/char/charComponent';
 
 class App extends Component {
   state = {
@@ -41,11 +42,21 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <button style={style} onClick={this.manipulateState}>Hi</button>
-        <UserOutput username={this.state.usernames[0]}/>
-        <UserOutput username={this.state.usernames[1]}/>
+        {
+          this.state.usernames.map(e=>{
+            return <UserOutput username={e}/>
+          })
+        }
+        {/* <UserOutput username={this.state.usernames[0]}/>
+        <UserOutput username={this.state.usernames[1]}/> */}
         <UserInput changer={this.inputChanger} name={this.state.usernames[0]}/>
         <ValidationComponent sLen={this.state.usernames[0].length}/>
-        <CharComponent letters={this.state.usernames[0]} />
+        {
+          this.state.usernames[0].split("").map(e=>{
+            return <CharOne letter={e}/>
+          })
+        }
+        {/* <CharComponent letters={this.state.usernames[0]} /> */}
       </div>
     );
   }
